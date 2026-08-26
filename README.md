@@ -16,14 +16,6 @@ Stone-code/
 └── projects/          # 项目实践
 ```
 
-## 学习路线
-
-- [x] Git 版本控制基础
-- [ ] HTML / CSS 基础
-- [ ] JavaScript 基础
-- [ ] Python 基础
-- [ ] 项目实战
-
 ## 学习笔记
 
 | 日期 | 主题 | 状态 |
