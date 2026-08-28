@@ -1,6 +1,5 @@
-# `Java` 的几种输出方法
+package Stone.test;
 
-```java
 public class Demo {
     public static void main(String[] args) {
         //换行并输出
@@ -13,5 +12,3 @@ public class Demo {
     }
 
 }
-```
-
