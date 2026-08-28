@@ -1,5 +1,7 @@
 package Stone.test;
 
+import java.awt.*;
+
 public class test1 {
     public static void main(String[] us) {
         double a = 0;
@@ -9,6 +11,9 @@ public class test1 {
         a += 10;
         a -= 2;
         System.out.println(a);
+
     }
 
 }
+
+
