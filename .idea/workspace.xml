@@ -29,12 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49414bf8-212e-4cc6-bd19-50e512c047fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Hello_Word.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hello Word test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello_Word.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hello_Word.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +85,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "C/C++ File.Hello Word test.cpp.executor": "Run",
     "C/C++ File.Hello_Word.cpp.executor": "Run",
     "CMake Application.Learing_to_code.executor": "Run",
     "CidrDebugProfileConversion": "true",
@@ -111,7 +108,7 @@
     "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
-  <component name="RunManager" selected="C/C++ File.Hello_Word.cpp">
+  <component name="RunManager" selected="C/C++ File.Hello Word test.cpp">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -122,6 +119,12 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Hello Word test.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Learing_to_code" TARGET_NAME="Hello Word test.cpp" CONFIG_NAME="Hello Word test.cpp">
+      <option name="sourceFile" value="Hello Word test.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Hello_Word.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Learing_to_code" TARGET_NAME="Hello_Word.cpp" CONFIG_NAME="Hello_Word.cpp">
       <option name="sourceFile" value="Hello_Word.cpp" />
       <method v="2">
@@ -129,17 +132,25 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="C/C++ File.Hello Word test.cpp" />
       <item itemvalue="C/C++ File.Hello_Word.cpp" />
       <item itemvalue="CMake Application.Learing_to_code" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="C/C++ File.Hello Word test.cpp" />
         <item itemvalue="C/C++ File.Hello_Word.cpp" />
       </list>
     </recent_temporary>
   </component>
   <component name="SelectedDebugProfileService"><![CDATA[{
   "profileIdByStamp": [
+    {
+      "first": {
+        "##RUN_CONFIGURATION##": "C/C++ File.Hello Word test.cpp"
+      },
+      "second": "ac0c23a2-6a69-47e7-89fc-aba7ec07bf30"
+    },
     {
       "first": {
         "##RUN_CONFIGURATION##": "CMake Application.Learing_to_code",
@@ -154,7 +165,7 @@
       "second": "ac0c23a2-6a69-47e7-89fc-aba7ec07bf30"
     }
   ],
-  "modificationCount": 8
+  "modificationCount": 10
 }]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
