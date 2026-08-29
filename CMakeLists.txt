@@ -3,4 +3,5 @@ project(Learing_to_code)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Learing_to_code main.cpp)
+add_executable(Learing_to_code main.cpp
+        Hello_Word.cpp)
