@@ -28,12 +28,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49414bf8-212e-4cc6-bd19-50e512c047fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cout打印输出.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello Word test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello_Word" beforeDir="false" />
-    </list>
+    <list default="true" id="49414bf8-212e-4cc6-bd19-50e512c047fe" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
