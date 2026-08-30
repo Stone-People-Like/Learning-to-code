@@ -29,8 +29,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49414bf8-212e-4cc6-bd19-50e512c047fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Hello Word test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello_Word.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Hello_Word.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cout打印输出.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello Word test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello_Word" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +89,7 @@
   "keyToString": {
     "C/C++ File.Hello Word test.cpp.executor": "Run",
     "C/C++ File.Hello_Word.cpp.executor": "Run",
+    "C/C++ File.cout打印输出.cpp.executor": "Run",
     "CMake Application.Learing_to_code.executor": "Run",
     "CidrDebugProfileConversion": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -108,7 +111,7 @@
     "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
-  <component name="RunManager" selected="C/C++ File.Hello Word test.cpp">
+  <component name="RunManager" selected="C/C++ File.cout打印输出.cpp">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -131,13 +134,21 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="cout打印输出.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Learing_to_code" TARGET_NAME="cout打印输出.cpp" CONFIG_NAME="cout打印输出.cpp">
+      <option name="sourceFile" value="cout打印输出.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="C/C++ File.Hello Word test.cpp" />
       <item itemvalue="C/C++ File.Hello_Word.cpp" />
+      <item itemvalue="C/C++ File.cout打印输出.cpp" />
       <item itemvalue="CMake Application.Learing_to_code" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="C/C++ File.cout打印输出.cpp" />
         <item itemvalue="C/C++ File.Hello Word test.cpp" />
         <item itemvalue="C/C++ File.Hello_Word.cpp" />
       </list>
@@ -145,6 +156,12 @@
   </component>
   <component name="SelectedDebugProfileService"><![CDATA[{
   "profileIdByStamp": [
+    {
+      "first": {
+        "##RUN_CONFIGURATION##": "C/C++ File.cout打印输出.cpp"
+      },
+      "second": "ac0c23a2-6a69-47e7-89fc-aba7ec07bf30"
+    },
     {
       "first": {
         "##RUN_CONFIGURATION##": "C/C++ File.Hello Word test.cpp"
@@ -165,7 +182,7 @@
       "second": "ac0c23a2-6a69-47e7-89fc-aba7ec07bf30"
     }
   ],
-  "modificationCount": 10
+  "modificationCount": 11
 }]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
