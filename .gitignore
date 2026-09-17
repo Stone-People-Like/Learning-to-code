@@ -1,0 +1,12 @@
+# macOS 系统文件
+.DS_Store
+
+# JetBrains IDE（IntelliJ IDEA / PyCharm / CLion 等）
+.idea/
+*.iml
+
+# 编译产物
+*.class
+__pycache__/
+*.py[cod]
+node_modules/
