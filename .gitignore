@@ -4,7 +4,11 @@
 # JetBrains IDE（IntelliJ IDEA / PyCharm / CLion 等）
 .idea/
 *.iml
+C语言入门\HelloWord\.vs\
 
+*.suo
+*.user
+*.slnx
 # 编译产物
 *.class
 __pycache__/
