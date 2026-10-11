@@ -1,9 +1,12 @@
 ﻿#include <stdio.h>
 
-//程序主入口
 int main() {
-	//程序主体内容
-	printf("欢迎来到SIMS系统！");
-	//程序出口
+	int number;
+	int number;
+	number = 100;
+
+	printf("你的余额为：%d\n",number);
+	number += 2;
+	printf("收到了2元红包后\n你的余额为：%d",number);
 	return 0;
 }
