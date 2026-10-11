@@ -1,5 +1,2 @@
 ﻿  Helloword.c
-C:\Users\admin\Desktop\Learning-to-code\C语言入门\HelloWord\HelloWord\Helloword.c(5,6): error C2086: “int number”: 重定义
-      C:\Users\admin\Desktop\Learning-to-code\C语言入门\HelloWord\HelloWord\Helloword.c(4,6):
-      参见“number”的声明
-  
+  HelloWord.vcxproj -> C:\Users\admin\Desktop\Learning-to-code\C语言入门\HelloWord\x64\Debug\HelloWord.exe
