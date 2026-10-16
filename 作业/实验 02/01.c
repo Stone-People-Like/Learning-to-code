@@ -7,8 +7,10 @@ int main() {
     int N;
     int flag = 0; //初始等于 0,代表是素数
     scanf("%d", &N);
-    if (N <= 2) {
-        printf("应输入大于 2 的整数");
+    if (N == 2) flag = 0;
+    if (N < 2) {
+        printf("应输入大于或等于 2 的正整数");
+        return 0;
     } else {
         for (int i = 2; i < N - 1; ++i) {
             if (N % i == 0) flag = 1; // 如果除尽了flag 等于 1，代表是素数
