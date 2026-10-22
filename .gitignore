@@ -10,6 +10,9 @@ C语言入门\HelloWord\.vs\
 *.user
 *.slnx
 # 编译产物
+*.exe
+*.obj
+*.o
 *.class
 __pycache__/
 *.py[cod]
