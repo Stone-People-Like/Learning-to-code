@@ -1,11 +1,10 @@
-//
-// Created by Admin on 2026/10/22.
-//
 #include <stdio.h>
-
-int main() {
-    float n;
-    scanf("%f", &n);
-    printf("%.1f", n);
+#include <string.h>
+int main(){
+    char a[10];
+    scanf("%s",&a);
+    for(int i=strlen(a)-1;i>=0;i--){
+        printf("%c",a[i]);
+    }
     return 0;
 }
