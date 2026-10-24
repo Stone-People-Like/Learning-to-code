@@ -1,5 +1,36 @@
-.idea/
-*.iml
-cmake-build-*/
+# ---- macOS 系统文件 ----
 .DS_Store
 
+# ---- JetBrains IDE（CLion / IntelliJ IDEA / PyCharm）----
+.idea/
+*.iml
+
+# ---- Visual Studio ----
+.vs/
+*.suo
+*.user
+*.slnx
+
+# ---- 编译产物 ----
+*.exe
+*.obj
+*.o
+*.a
+*.so
+*.dll
+*.class
+*.out
+
+# ---- CMake 构建目录 ----
+cmake-build-*/
+
+# ---- Java 构建输出 ----
+out/
+bin/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+
+# ---- Node ----
+node_modules/
