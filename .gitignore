@@ -1,32 +1,36 @@
-### IntelliJ IDEA ###
+# ---- macOS 系统文件 ----
+.DS_Store
+
+# ---- JetBrains IDE（CLion / IntelliJ IDEA / PyCharm）----
 .idea/
 *.iml
+
+# ---- Visual Studio ----
+.vs/
+*.suo
+*.user
+*.slnx
+
+# ---- 编译产物 ----
+*.exe
+*.obj
+*.o
+*.a
+*.so
+*.dll
+*.class
+*.out
+
+# ---- CMake 构建目录 ----
+cmake-build-*/
+
+# ---- Java 构建输出 ----
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-.kotlin
-
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# ---- Python ----
+__pycache__/
+*.py[cod]
 
-### VS Code ###
-.vscode/
-
-### Mac OS ###
-.DS_Store
+# ---- Node ----
+node_modules/
