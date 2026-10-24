@@ -14,6 +14,7 @@ C语言入门\HelloWord\.vs\
 *.obj
 *.o
 *.class
+cmake-build-*/
 __pycache__/
 *.py[cod]
 node_modules/
