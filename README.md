@@ -1,137 +1,125 @@
-# Learning to Code
+# Stone 的 Rust 学习记录
 
-> 多人协作的编程学习仓库 — 记录成长，共享知识
+> 陆云清的个人 Rust 学习分支 — 从 `cargo new` 开始的成长之路
 
-## 简介
+## 关于我
 
-本仓库由多位学习者共同维护，用于记录编程学习的过程、笔记与项目实践。`main` 分支存放共用的学习资料，各自的学习记录则放在独立的个人分支中。在这里，每一次提交都是成长的足迹，每一行代码都是通向未来的阶梯。
+我是陆云清（Stone），正在学习 Rust 编程。这个分支记录我跟随[清华大学 Rust 课程](https://lab.cs.tsinghua.edu.cn/rust/)自学的过程，包含每章笔记、课后练习与作业实现。
 
-## 分支结构
+## 教程来源
 
-| 分支 | 说明 | 维护者 |
-|------|------|--------|
-| `main` | 公共学习资料、共享笔记与资源 | 共同维护 |
-| `Stone-code` | 个人学习记录与代码练习 | Stone |
-| `Waking-code` | 个人学习记录与代码练习 | Waking |
+- **课程主页**：<https://lab.cs.tsinghua.edu.cn/rust/>
+- **开发工具**：<https://lab.cs.tsinghua.edu.cn/rust/tools/>
+- **环境配置**：<https://lab.cs.tsinghua.edu.cn/rust/setup/>
 
-## 目录规划
+## 学习目录
 
 ```
-Learning-to-code/
-├── README.md            # 本文件
-├── notes/               # 公共学习笔记
-│   ├── git/             # Git 版本控制
-│   ├── frontend/        # 前端基础（HTML/CSS/JS）
-│   ├── backend/         # 后端基础
-│   └── algorithms/      # 算法与数据结构
-├── exercises/           # 代码练习
-│   ├── beginner/        # 入门练习
-│   ├── intermediate/    # 进阶练习
-│   └── advanced/        # 高级练习
-└── projects/            # 项目实践
-    ├── mini-projects/   # 小型项目
-    └── fullstack/       # 完整项目
+Stone-code-Rust/
+├── README.md                    # 个人学习说明
+├── Rust/                        # 代码练习与作业
+│   ├── 01_basic/                # 基本语法：变量、类型、函数、控制流
+│   ├── 02_ownership/            # 所有权与结构化数据
+│   ├── 03_stdlib/               # 标准库
+│   ├── 04_generics_traits/      # 泛型、特型与生命周期
+│   ├── 05_project_manage/       # 工程管理与 Cargo
+│   ├── 06_concurrency/          # 并发编程
+│   ├── 07_io_async/             # 输入输出与异步编程
+│   ├── 08_advanced/             # 高级特性与语言综述
+│   └── labs/                    # 小作业 Lab 1–4 与大作业 Agent
+└── Markdown 笔记/                # 各章对应的学习笔记
+    ├── 01_basic/
+    ├── 02_ownership/
+    └── ...（与 Rust/ 章节一一对应）
 ```
 
-## 快速开始
+## 学习路线
+
+| 章节 | 主题 | 状态 |
+|------|------|------|
+| 01 | 课程介绍与基本语法 | 待开始 |
+| 02 | 所有权与结构化数据 | 待开始 |
+| 03 | 标准库 | 待开始 |
+| 04 | 泛型、特型与生命周期 | 待开始 |
+| 05 | 工程管理与其他 | 待开始 |
+| 06 | 并发编程 | 待开始 |
+| 07 | 输入输出与异步编程 | 待开始 |
+| 08 | 高级特性与编程语言综述 | 待开始 |
+
+### 小作业
+
+| 作业 | 内容 | 状态 |
+|------|------|------|
+| Lab 1 | 文本统计 | 待开始 |
+| Lab 2 | 测试 AI 代码 | 待开始 |
+| Lab 3 | 重新实现 `cut` | 待开始 |
+| Lab 4 | Vibe Wordle | 待开始 |
+
+### 大作业
+
+| 项目 | 内容 | 状态 |
+|------|------|------|
+| Agent | 基于 Rust 的智能体实现 | 待开始 |
+
+## 开发环境
+
+- **IDE**: VSCode + rust-analyzer（课程推荐）
+- **工具链**: rustup / cargo / rustc
+- **辅助工具**: clippy（静态检查）、rustfmt（格式化）、miri（动态检查）
+
+### 常用命令
 
 ```bash
-# 克隆仓库
-git clone https://github.com/Stone-People-Like/Learning-to-code.git
-cd Learning-to-code
+# 安装 / 更新工具链
+rustup update
 
-# 切换到你的个人分支
-git checkout Stone-code    # 或 Waking-code
+# 安装辅助组件
+rustup component add clippy rustfmt
 
-# 开始记录你的学习旅程
+# 新建项目
+cargo new hello_rust
+
+# 编译运行
+cargo run
+
+# 检查、格式化、静态分析
+cargo check
+cargo fmt
+cargo clippy
+
+# 查看编译器错误详解
+rustc --explain E0384
 ```
 
-## 协作约定
+VSCode 推荐配置（`settings.json`）：
 
-### 提交规范
-
-- **公共资料** 统一放在 `main` 分支，提交前互相确认
-- **个人分支** 可自由管理，记录自己的笔记、练习和项目
-- 提交信息使用简洁明了的描述，例如：`添加 Python 基础笔记`
-- 遵守友好协作原则，尊重彼此的代码和内容
-
-### 分支管理流程
-
-```bash
-# 1. 每次开始工作前，拉取最新代码
-git pull origin main
-
-# 2. 切换到你的个人分支
-git checkout Stone-code
-
-# 3. 完成工作后提交
-git add .
-git commit -m "描述你的改动"
-
-# 4. 推送到远端
-git push origin Stone-code
-
-# 5. 如需合并到 main，发起 Pull Request
+```json
+{
+  "rust-analyzer.check.command": "clippy",
+  "editor.formatOnSave": true
+}
 ```
-
-### 文件命名规范
-
-| 类型 | 命名格式 | 示例 |
-|------|---------|------|
-| 学习笔记 | `YYYY-MM-DD-主题.md` | `2026-08-26-git基础.md` |
-| 代码练习 | `练习编号-主题` | `01-hello-world.py` |
-| 项目目录 | `小写中划线` | `my-first-website/` |
 
 ## 学习资源
 
 ### 官方文档
-- [Git 官方文档](https://git-scm.com/doc)
-- [MDN Web Docs](https://developer.mozilla.org/)
+- [Rust 程序设计语言（中文版）](https://kaisery.github.io/trpl-zh-cn/)
+- [Rust 标准库文档](https://doc.rust-lang.org/std/)
+- [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
+- [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 
 ### 在线学习平台
-- [freeCodeCamp](https://www.freecodecamp.org/)
+- [Rustlings 练习](https://github.com/rust-lang/rustlings)
 - [LeetCode 力扣](https://leetcode.cn/)
-- [Codecademy](https://www.codecademy.com/)
 
-### 经典书籍推荐
-- 《JavaScript 高级程序设计》
-- 《Python 编程：从入门到实践》
-- 《算法图解》
-- 《代码整洁之道》
+### AI 辅助开发原则
 
-### 工具与效率
-- [VS Code](https://code.visualstudio.com/) — 代码编辑器
-- [GitHub](https://github.com/) — 代码托管
-- [Stack Overflow](https://stackoverflow.com/) — 问答社区
+课程明确要求：**必须自己参与开发过程，与 AI 协同，而不是把题目直接交给 AI**。
 
-## FAQ
-
-<details>
-<summary>如何在个人分支上开始记录？</summary>
-
-切换到你的个人分支后，在该分支上自由创建文件和目录即可。所有提交只影响你自己的分支，不会干扰 `main` 分支和同伴的分支。
-
-</details>
-
-<details>
-<summary>如何将个人内容共享到 main 分支？</summary>
-
-在 GitHub 上发起 Pull Request，从你的个人分支合并到 `main`。另一位成员审核确认后即可合并。
-
-</details>
-
-<details>
-<summary>遇到冲突怎么办？</summary>
-
-先拉取最新代码 `git pull`，Git 会提示冲突文件。手动编辑冲突文件解决冲突后，重新提交即可。
-
-</details>
-
-## 关于我们
-
-我们是正在学习编程的伙伴，相信结伴学习能走得更远。这个仓库见证了我们的学习旅程，也希望它能激励更多走在同一条路上的人。
+- 不使用 AI 生成作业主体代码
+- 不借助 AI 翻译或伪原创以规避查重
+- 不生成整篇实验报告而不理解、不修改
 
 ---
 
-<p align="center">愿每一次提交都是成长的足迹 🌱</p>
-<p align="center">Stay hungry, stay foolish.</p>
+公共学习资料请查看 [`main` 分支](https://github.com/Stone-People-Like/Learning-to-code/tree/main)

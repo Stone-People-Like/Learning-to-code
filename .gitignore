@@ -34,3 +34,8 @@ __pycache__/
 
 # ---- Node ----
 node_modules/
+
+# ---- Rust ----
+target/
+*.rs.bk
+*.pdb
