@@ -34,3 +34,6 @@ __pycache__/
 
 # ---- Node ----
 node_modules/
+
+# ---- 无扩展名的编译产物（macOS/Linux 可执行文件）----
+C++基础入门/C++初识/Hello Word
