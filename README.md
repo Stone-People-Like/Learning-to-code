@@ -26,11 +26,17 @@ Stone-code-Rust/
 │   ├── 06_concurrency/          # 并发编程
 │   ├── 07_io_async/             # 输入输出与异步编程
 │   ├── 08_advanced/             # 高级特性与语言综述
-│   └── labs/                    # 小作业 Lab 1–4 与大作业 Agent
+│   ├── labs/                    # 小作业
+│   │   ├── lab1_textstat/       # Lab 1 文本统计（Cargo 项目骨架）
+│   │   ├── lab2_test_ai/        # Lab 2 测试 AI 代码
+│   │   ├── lab3_cut/            # Lab 3 重新实现 cut
+│   │   └── lab4_wordle/         # Lab 4 Vibe Wordle
+│   └── projects/agent/          # 大作业：Agent
 └── Markdown 笔记/                # 各章对应的学习笔记
-    ├── 01_basic/
-    ├── 02_ownership/
-    └── ...（与 Rust/ 章节一一对应）
+    └── Rust/
+        ├── 01_basic/
+        ├── 02_ownership/
+        └── ...（与 Rust/ 章节一一对应）
 ```
 
 ## 学习路线
