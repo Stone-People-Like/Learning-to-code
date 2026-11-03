@@ -4,7 +4,7 @@
 
 ## 关于我
 
-我是陆云清（Stone），正在学习 Rust 编程。这个分支记录我跟随[清华大学 Rust 课程](https://lab.cs.tsinghua.edu.cn/rust/)自学的过程，包含每章笔记、课后练习与作业实现。
+我是陆云清（Stone），正在学习 Rust 编程。当前主要通过**洛谷刷题**的方式快速上手（学习路线见 [`Rust/洛谷刷题/README.md`](Rust/洛谷刷题/README.md)），同时保留[清华大学 Rust 课程](https://lab.cs.tsinghua.edu.cn/rust/)的章节练习与作业作为参考资料。
 
 ## 教程来源
 
@@ -26,6 +26,7 @@ Stone-code-Rust/
 │   ├── 06_concurrency/          # 并发编程
 │   ├── 07_io_async/             # 输入输出与异步编程
 │   ├── 08_advanced/             # 高级特性与语言综述
+│   ├── 洛谷刷题/                # 洛谷题单学习路线（当前主线，271 题）
 │   ├── labs/                    # 小作业
 │   │   ├── lab1_textstat/       # Lab 1 文本统计（Cargo 项目骨架）
 │   │   ├── lab2_test_ai/        # Lab 2 测试 AI 代码
