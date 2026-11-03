@@ -27,6 +27,9 @@ cmake-build-*/
 # ---- Java 构建输出 ----
 out/
 bin/
+# 例外：Rust 的 src/bin 存放题目源码，必须跟踪
+!*/src/bin/
+!*/src/bin/**
 
 # ---- Python ----
 __pycache__/

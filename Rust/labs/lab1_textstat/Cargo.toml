@@ -1,7 +1,0 @@
-[package]
-name = "textstat"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-# 题目要求：不得使用第三方 crate

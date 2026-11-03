@@ -1,110 +1,87 @@
 # Stone 的 Rust 学习记录
 
-> 陆云清的个人 Rust 学习分支 — 从 `cargo new` 开始的成长之路
+> 陆云清的个人 Rust 学习分支 — 用洛谷刷题快速上手 Rust
 
 ## 关于我
 
-我是陆云清（Stone），正在学习 Rust 编程。当前主要通过**洛谷刷题**的方式快速上手（学习路线见 [`Rust/洛谷刷题/README.md`](Rust/洛谷刷题/README.md)），同时保留[清华大学 Rust 课程](https://lab.cs.tsinghua.edu.cn/rust/)的章节练习与作业作为参考资料。
+我是陆云清（Stone），正在学习 Rust 编程。学习方式是**通过洛谷题单刷题**，在做题中逐步掌握 Rust 的语法、所有权模型与标准库用法。
 
-## 教程来源
-
-- **课程主页**：<https://lab.cs.tsinghua.edu.cn/rust/>
-- **开发工具**：<https://lab.cs.tsinghua.edu.cn/rust/tools/>
-- **环境配置**：<https://lab.cs.tsinghua.edu.cn/rust/setup/>
-
-## 学习目录
-
-```
-Stone-code-Rust/
-├── README.md                    # 个人学习说明
-├── Rust/                        # 代码练习与作业
-│   ├── 01_basic/                # 基本语法：变量、类型、函数、控制流
-│   ├── 02_ownership/            # 所有权与结构化数据
-│   ├── 03_stdlib/               # 标准库
-│   ├── 04_generics_traits/      # 泛型、特型与生命周期
-│   ├── 05_project_manage/       # 工程管理与 Cargo
-│   ├── 06_concurrency/          # 并发编程
-│   ├── 07_io_async/             # 输入输出与异步编程
-│   ├── 08_advanced/             # 高级特性与语言综述
-│   ├── 洛谷刷题/                # 洛谷题单学习路线（当前主线，271 题）
-│   ├── labs/                    # 小作业
-│   │   ├── lab1_textstat/       # Lab 1 文本统计（Cargo 项目骨架）
-│   │   ├── lab2_test_ai/        # Lab 2 测试 AI 代码
-│   │   ├── lab3_cut/            # Lab 3 重新实现 cut
-│   │   └── lab4_wordle/         # Lab 4 Vibe Wordle
-│   └── projects/agent/          # 大作业：Agent
-└── Markdown 笔记/                # 各章对应的学习笔记
-    └── Rust/
-        ├── 01_basic/
-        ├── 02_ownership/
-        └── ...（与 Rust/ 章节一一对应）
-```
+已经刷完的题会标记状态，卡住的地方整理成笔记，方便回头复习。
 
 ## 学习路线
 
-| 章节 | 主题 | 状态 |
-|------|------|------|
-| 01 | 课程介绍与基本语法 | 待开始 |
-| 02 | 所有权与结构化数据 | 待开始 |
-| 03 | 标准库 | 待开始 |
-| 04 | 泛型、特型与生命周期 | 待开始 |
-| 05 | 工程管理与其他 | 待开始 |
-| 06 | 并发编程 | 待开始 |
-| 07 | 输入输出与异步编程 | 待开始 |
-| 08 | 高级特性与编程语言综述 | 待开始 |
+完整路线见 [`Rust/洛谷刷题/README.md`](Rust/洛谷刷题/README.md)，共 18 个题单 / 271 题，按 Rust 学习曲线分为六个阶段：
 
-### 小作业
+| 阶段 | 内容 | 题单 | 题数 |
+|------|------|------|------|
+| 一 · 语法入门 | 输入输出、控制流 | 100–102 | 54 |
+| 二 · 数据组织 | Vec / String / struct | 103–105 | 50 |
+| 三 · 基础算法 | 模拟、排序、枚举、递推 | 106–109 | 57 |
+| 四 · 稍难算法 | 贪心、二分、搜索 | 110–112 | 41 |
+| 五 · 数据结构 | 线性表、树、集合、图 | 113–116 | 45 |
+| 六 · 数学 | 数论与整数边界 | 117 | 24 |
 
-| 作业 | 内容 | 状态 |
-|------|------|------|
-| Lab 1 | 文本统计 | 待开始 |
-| Lab 2 | 测试 AI 代码 | 待开始 |
-| Lab 3 | 重新实现 `cut` | 待开始 |
-| Lab 4 | Vibe Wordle | 待开始 |
+## 目录结构
 
-### 大作业
+```
+Stone-code-Rust/
+├── README.md                    # 本文件
+├── luogu/                       # 刷题工作区（一个 Cargo 项目，一题一个 bin）
+│   ├── Cargo.toml
+│   ├── README.md                # 运行方式说明
+│   └── src/
+│       ├── lib.rs               # 公共输入工具
+│       └── bin/                 # 每道题一个文件，如 P1001.rs
+└── Rust/
+    └── 洛谷刷题/                # 题单与进度跟踪
+        ├── README.md            # 完整路线说明
+        ├── 01_语法入门/
+        │   ├── 100_入门1顺序结构/
+        │   └── ...
+        └── 06_数学/
+```
 
-| 项目 | 内容 | 状态 |
-|------|------|------|
-| Agent | 基于 Rust 的智能体实现 | 待开始 |
+## 刷题流程
+
+```bash
+cd luogu
+
+# 1. 打开对应题目文件
+#    luogu/src/bin/P1001.rs
+
+# 2. 本地测试
+cargo run --bin P1001 < in.txt
+
+# 3. 检查编译告警
+cargo clippy --bin P1001
+
+# 4. 提交洛谷，通过后在题单 README 里把 ⬜ 改成 ✅
+```
+
+输入工具在 `luogu/src/lib.rs`：
+
+```rust
+let mut it = luogu::input();          // 读完所有输入，按空白切分
+let n: usize = it.next().unwrap().parse().unwrap();
+
+let line = luogu::read_line();        // 读一整行，保留空格
+```
 
 ## 开发环境
 
-- **IDE**: VSCode + rust-analyzer（课程推荐）
-- **工具链**: rustup / cargo / rustc
-- **辅助工具**: clippy（静态检查）、rustfmt（格式化）、miri（动态检查）
+- **工具链**: rustup / cargo / rustc（本地已装 1.99.1）
+- **crates 镜像**: USTC sparse 镜像（`~/.cargo/config.toml`）
+- **IDE**: 任意支持 rust-analyzer 的编辑器（VSCode / RustRover 均可）
 
-### 常用命令
+常用命令：
 
 ```bash
-# 安装 / 更新工具链
-rustup update
-
-# 安装辅助组件
-rustup component add clippy rustfmt
-
-# 新建项目
-cargo new hello_rust
-
-# 编译运行
-cargo run
-
-# 检查、格式化、静态分析
-cargo check
-cargo fmt
-cargo clippy
-
-# 查看编译器错误详解
-rustc --explain E0384
-```
-
-VSCode 推荐配置（`settings.json`）：
-
-```json
-{
-  "rust-analyzer.check.command": "clippy",
-  "editor.formatOnSave": true
-}
+rustup update                  # 更新工具链
+cargo run --bin <题号>         # 运行某题
+cargo check --bin <题号>       # 检查编译
+cargo clippy --bin <题号>      # 静态检查
+cargo fmt                      # 格式化
+rustc --explain E0384          # 查错误码详解
 ```
 
 ## 学习资源
@@ -113,19 +90,11 @@ VSCode 推荐配置（`settings.json`）：
 - [Rust 程序设计语言（中文版）](https://kaisery.github.io/trpl-zh-cn/)
 - [Rust 标准库文档](https://doc.rust-lang.org/std/)
 - [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
-- [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
-
-### 在线学习平台
 - [Rustlings 练习](https://github.com/rust-lang/rustlings)
-- [LeetCode 力扣](https://leetcode.cn/)
 
-### AI 辅助开发原则
-
-课程明确要求：**必须自己参与开发过程，与 AI 协同，而不是把题目直接交给 AI**。
-
-- 不使用 AI 生成作业主体代码
-- 不借助 AI 翻译或伪原创以规避查重
-- 不生成整篇实验报告而不理解、不修改
+### 题目来源
+- [洛谷题单列表](https://www.luogu.com.cn/training/list)
+- [洛谷题库](https://www.luogu.com.cn/problem/list)
 
 ---
 
