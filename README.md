@@ -1,137 +1,110 @@
-# Learning to Code
+# Stone 的 Go 学习记录
 
-> 多人协作的编程学习仓库 — 记录成长，共享知识
+> 陆云清的个人 Go 学习分支 — 用洛谷刷题快速上手 Go
 
-## 简介
+## 关于我
 
-本仓库由多位学习者共同维护，用于记录编程学习的过程、笔记与项目实践。`main` 分支存放共用的学习资料，各自的学习记录则放在独立的个人分支中。在这里，每一次提交都是成长的足迹，每一行代码都是通向未来的阶梯。
+我是陆云清（Stone），正在学习 Go 编程。学习方式是**通过洛谷题单刷题**，在做题中逐步掌握 Go 的语法、切片、接口与并发模型。
 
-## 分支结构
+已经刷完的题会标记状态，卡住的地方整理成笔记，方便回头复习。
 
-| 分支 | 说明 | 维护者 |
-|------|------|--------|
-| `main` | 公共学习资料、共享笔记与资源 | 共同维护 |
-| `Stone-code` | 个人学习记录与代码练习 | Stone |
-| `Waking-code` | 个人学习记录与代码练习 | Waking |
+## 学习路线
 
-## 目录规划
+完整路线见 [`Go/洛谷刷题/README.md`](Go/洛谷刷题/README.md)，共 18 个题单 / 271 题，按 Go 学习曲线分为六个阶段：
+
+| 阶段 | 内容 | 题单 | 题数 |
+|------|------|------|------|
+| 一 · 语法入门 | 输入输出、控制流 | 100–102 | 54 |
+| 二 · 数据组织 | slice / string / struct | 103–105 | 50 |
+| 三 · 基础算法 | 模拟、排序、枚举、递推 | 106–109 | 57 |
+| 四 · 稍难算法 | 贪心、二分、搜索 | 110–112 | 41 |
+| 五 · 数据结构 | 线性表、树、集合、图 | 113–116 | 45 |
+| 六 · 数学 | 数论与整数边界 | 117 | 24 |
+
+## 目录结构
 
 ```
-Learning-to-code/
-├── README.md            # 本文件
-├── notes/               # 公共学习笔记
-│   ├── git/             # Git 版本控制
-│   ├── frontend/        # 前端基础（HTML/CSS/JS）
-│   ├── backend/         # 后端基础
-│   └── algorithms/      # 算法与数据结构
-├── exercises/           # 代码练习
-│   ├── beginner/        # 入门练习
-│   ├── intermediate/    # 进阶练习
-│   └── advanced/        # 高级练习
-└── projects/            # 项目实践
-    ├── mini-projects/   # 小型项目
-    └── fullstack/       # 完整项目
+Stone-code-Go/
+├── README.md                    # 本文件
+├── luogu-go/                    # 刷题工作区（每题一个目录）
+│   ├── go.mod                   # module luogu-go
+│   ├── README.md                # 运行方式说明
+│   ├── B2002/main.go            # Hello,World!（完整示例）
+│   ├── P1001/main.go            # A+B Problem（完整示例）
+│   └── ...                      # 其余 260 道题的 main.go 骨架
+└── Go/
+    └── 洛谷刷题/                # 题单与进度跟踪
+        ├── README.md            # 完整路线说明
+        ├── 01_语法入门/
+        │   ├── 100_入门1顺序结构/
+        │   └── ...
+        └── 06_数学/
 ```
 
-## 快速开始
+## 刷题流程
 
 ```bash
-# 克隆仓库
-git clone https://github.com/Stone-People-Like/Learning-to-code.git
-cd Learning-to-code
+cd luogu-go
 
-# 切换到你的个人分支
-git checkout Stone-code    # 或 Waking-code
+# 1. 打开对应题目文件
+#    luogu-go/P1001/main.go
 
-# 开始记录你的学习旅程
+# 2. 本地测试
+go run ./P1001 < in.txt
+
+# 3. 检查编译
+go vet ./P1001
+
+# 4. 提交洛谷，通过后在题单 README 里把 ⬜ 改成 ✅
 ```
 
-## 协作约定
+输入输出模板（洛谷数据量大，用 `bufio` 避免超时）：
 
-### 提交规范
+```go
+import (
+    "bufio"
+    "fmt"
+    "os"
+)
 
-- **公共资料** 统一放在 `main` 分支，提交前互相确认
-- **个人分支** 可自由管理，记录自己的笔记、练习和项目
-- 提交信息使用简洁明了的描述，例如：`添加 Python 基础笔记`
-- 遵守友好协作原则，尊重彼此的代码和内容
+in := bufio.NewReader(os.Stdin)
+out := bufio.NewWriter(os.Stdout)
+defer out.Flush()
 
-### 分支管理流程
+var n int
+fmt.Fscan(in, &n)
+```
+
+## 开发环境
+
+- **版本**: Go 1.26.5（`/usr/local/go/bin/go`）
+- **模块代理**: `https://goproxy.cn,direct`
+- **校验数据库**: `sum.golang.google.cn`
+- **IDE**: 任意支持 Go 的编辑器（Goland / VSCode + gopls）
+
+常用命令：
 
 ```bash
-# 1. 每次开始工作前，拉取最新代码
-git pull origin main
-
-# 2. 切换到你的个人分支
-git checkout Stone-code
-
-# 3. 完成工作后提交
-git add .
-git commit -m "描述你的改动"
-
-# 4. 推送到远端
-git push origin Stone-code
-
-# 5. 如需合并到 main，发起 Pull Request
+go version                     # 查看版本
+go run ./<题号>                # 运行某题
+go vet ./<题号>                # 检查编译
+go build -o /tmp/p ./<题号>    # 编译成可执行文件
+go mod tidy                    # 整理依赖
+gofmt -w .                     # 格式化
 ```
-
-### 文件命名规范
-
-| 类型 | 命名格式 | 示例 |
-|------|---------|------|
-| 学习笔记 | `YYYY-MM-DD-主题.md` | `2026-08-26-git基础.md` |
-| 代码练习 | `练习编号-主题` | `01-hello-world.py` |
-| 项目目录 | `小写中划线` | `my-first-website/` |
 
 ## 学习资源
 
 ### 官方文档
-- [Git 官方文档](https://git-scm.com/doc)
-- [MDN Web Docs](https://developer.mozilla.org/)
+- [Go 官方文档](https://go.dev/doc/)
+- [Go 语言之旅（中文）](https://tour.go-zh.org/)
+- [Effective Go](https://go.dev/doc/effective_go)
+- [Go by Example](https://gobyexample.com/)
 
-### 在线学习平台
-- [freeCodeCamp](https://www.freecodecamp.org/)
-- [LeetCode 力扣](https://leetcode.cn/)
-- [Codecademy](https://www.codecademy.com/)
-
-### 经典书籍推荐
-- 《JavaScript 高级程序设计》
-- 《Python 编程：从入门到实践》
-- 《算法图解》
-- 《代码整洁之道》
-
-### 工具与效率
-- [VS Code](https://code.visualstudio.com/) — 代码编辑器
-- [GitHub](https://github.com/) — 代码托管
-- [Stack Overflow](https://stackoverflow.com/) — 问答社区
-
-## FAQ
-
-<details>
-<summary>如何在个人分支上开始记录？</summary>
-
-切换到你的个人分支后，在该分支上自由创建文件和目录即可。所有提交只影响你自己的分支，不会干扰 `main` 分支和同伴的分支。
-
-</details>
-
-<details>
-<summary>如何将个人内容共享到 main 分支？</summary>
-
-在 GitHub 上发起 Pull Request，从你的个人分支合并到 `main`。另一位成员审核确认后即可合并。
-
-</details>
-
-<details>
-<summary>遇到冲突怎么办？</summary>
-
-先拉取最新代码 `git pull`，Git 会提示冲突文件。手动编辑冲突文件解决冲突后，重新提交即可。
-
-</details>
-
-## 关于我们
-
-我们是正在学习编程的伙伴，相信结伴学习能走得更远。这个仓库见证了我们的学习旅程，也希望它能激励更多走在同一条路上的人。
+### 题目来源
+- [洛谷题单列表](https://www.luogu.com.cn/training/list)
+- [洛谷题库](https://www.luogu.com.cn/problem/list)
 
 ---
 
-<p align="center">愿每一次提交都是成长的足迹 🌱</p>
-<p align="center">Stay hungry, stay foolish.</p>
+公共学习资料请查看 [`main` 分支](https://github.com/Stone-People-Like/Learning-to-code/tree/main)
